@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FootballCounter</string>
+
+    <string-array name="array_team_a">
+        <item>Choose Team</item>
+        <item>Atlanta Falcons</item>
+        <item>Carolina Panthers</item>
+        <item>New Orleans Saints</item>
+        <item>Tempa Bay Buccaneers</item>
+    </string-array>
+
+</resources>
