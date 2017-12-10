@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.footballcounter.MainActivity">
+
+    <!-- I would like to build a Football Match Counter
+        Teams should be available via dropdown menu -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <!-- vertical layout of team A -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Team A name, shall be changed to dropdown menu later -->
+
+                  <Spinner
+                    android:id="@+id/spinner_team_a"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="#009688"
+                    android:gravity="center_horizontal"></Spinner>
+
+                <!-- Team A Dummy Placeholder
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="Team A - dummy"
+                    android:textColor="#000000"
+                    android:textSize="20sp" /> -->
+
+
+                <TextView
+                    android:id="@+id/winner_text_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textSize="20dp" />
+
+                <!-- Team A score -->
+                <TextView
+                    android:id="@+id/score_team_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="40sp" />
+
+                <!-- Touchdown button Team A -->
+
+                <Button
+                    android:id="@+id/touchdown_team_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:onClick="incrementSixForA"
+                    android:text="Touchdown"/>
+
+                <!-- Field Goal button Team A -->
+                <Button
+                    android:id="@+id/field_goal_team_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:onClick="incrementThreeForA"
+                    android:text="Field Goal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="Safety or 2 point conversion" />
+
+                <!-- 2 Points button Team A (either Safety or 2 point conversion -->
+                <Button
+                    android:id="@+id/two_point_conversion_team_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="incrementTwoForA"
+                    android:text="2 Points"/>
+
+                <!-- Extra Point button Team A -->
+                <Button
+                    android:id="@+id/extra_point_team_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:onClick="incrementOneForA"
+                    android:text="Extra Point"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#000000"></LinearLayout>
+
+
+            <!-- vertical layout of team B -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Team B name, shall be changed to dropdown menu later -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="Team B - dummy"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/winner_text_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textSize="20dp"/>
+
+                <!-- Team B score -->
+                <TextView
+                    android:id="@+id/score_team_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="40sp" />
+
+                <!-- Touchdown button Team B -->
+                <Button
+                    android:id="@+id/touchdown_team_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:onClick="incrementSixForB"
+                    android:text="Touchdown"/>
+
+                <!-- Field Goal button Team B -->
+                <Button
+                    android:id="@+id/field_goal_team_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:onClick="incrementThreeForB"
+                    android:text="Field Goal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="Safety or 2 point conversion" />
+
+                <!-- 2 Points button Team B  (either Safety or 2 point conversion)-->
+                <Button
+                    android:id="@+id/two_point_conversion_team_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="incrementTwoForB"
+                    android:text="2 Points"/>
+
+                <!-- Extra Point button Team B -->
+                <Button
+                    android:id="@+id/extra_point_team_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:onClick="incrementOneForB"
+                    android:text="Extra Point"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/undo_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:text="Undo"
+                android:onClick="undoLastAction"/>
+
+            <Button
+                android:id="@+id/winner_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:onClick="howWon"
+                android:text="Winner"/>
+
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:onClick="resetScores"
+                android:text="Reset"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
